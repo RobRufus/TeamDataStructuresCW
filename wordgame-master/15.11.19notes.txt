@@ -1,0 +1,47 @@
+GameController implements Controller
+
+GameBoard String[][]
+Rack
+
+CalcMVC, Main Class that creates each object. See exmaple.
+
+- - - -
+- - X -
+- - - -
+
+one package, small enough
+
+not very efficiency, lab3 for input/output, Scanner not the best choice. Coursewoerk spec. buffered Reader. buffer
+
+Files (java nio) readAllLines() to String Object in constructor.
+
+Look for buffering for efficient practises using data structure. 
+
+https://stackoverflow.com/questions/2626835/is-there-functionality-to-generate-a-random-character-in-java
+
+
+
+
+
+
+random bonus tile code
+// Place 8 tiles at random points on the board, these are the special tiles marked with X
+		
+		int numberOfTiles = 1;
+		
+		while (numberOfTiles <= 8) {
+			// Get a random x and y coordinate between 0-9
+			int x = random.nextInt(10); 
+			int y = random.nextInt(10);
+			
+			// Check if space isn't already marked with a +, move on if already marked
+			
+			if (!board[x][y].equals("+")) {
+				board[x][y] = "+";
+				numberOfTiles++;
+			} else {
+				;; // Do nothing
+			}	
+		}
+		
+		
